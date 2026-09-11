@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom and Bouquet - Account</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+
+    <div class="account-box">
+        
+        <div class="shop-header">
+            <h1>Blossom & Bouquet</h1>
+            <p>Your Favorite Flower Shop</p>
+        </div>
+
+  
+        <div class="toggle-buttons">
+            <button id="showLoginBtn" class="toggle-btn active-tab" onclick="openLogin()">Log In</button>
+            <button id="showSignupBtn" class="toggle-btn" onclick="openSignup()">Sign Up</button>
+        </div>
+
+    
+        <div id="loginSection" class="form-container">
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="input-div">
+                    <label for="loginEmail">Email Address:</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-div">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password" required>
+                </div>
+
+                <div class="form-options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" onclick="alert('Password reset link sent to your email!')">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">Login to Shop</button>
+            </form>
+        </div>
+
+        <div id="signupSection" class="form-container" style="display: none;">
+            <form id="signupForm" onsubmit="handleSignup(event)">
+                <div class="input-div">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-div">
+                    <label for="signupEmail">Email Address:</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-div">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" placeholder="Create a strong Password" required>
+                </div>
+<p id="signupError" style="color: red; font-size: 13px; margin: -10px 0 15px 0; font-weight: bold; display: none;"></p>
+                <div class="form-options">
+                    <label><input type="checkbox" required> I agree to the terms and privacy policy</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Create My Account</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
